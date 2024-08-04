@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0d10;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 1em 2em;
+    background-color: #161a20;
+    border: none;
+    color: #f0f0f0;
+    border-radius: 1000px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 107%;
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+    border-radius: 1000px;
+    z-index: -1;
+}
+
+button:hover {
+    z-index: 0;
+    box-shadow: 50px 0 200px #008cff, -50px 0 200px #e100ff;
+}
