@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form - Show/Hide Password</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="form">
+            <div class="group">
+                <h1>Tuan Kha Dev</h1>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+            </div>
+
+            <div class="group">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" placeholder="" id="name" autocomplete="off">
+                <label for="name">Username...</label>
+            </div>
+            <div class="group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="" id="password" autocomplete="off">
+                <i onclick=ChangeTypePass() class="fa-regular fa-eye"></i>
+                <i onclick=ChangeTypePass() class="fa-regular fa-eye-slash"></i>
+                <label for="password">Password...</label>
+            </div>
+            <div class="login-btn">
+                <button>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ChangeTypePass = () => {
+            const password = document.getElementById('password');
+            password.type = password.type == 'password' ? 'text' : 'password';
+        }
+    </script>
+</body>
+
+</html>
